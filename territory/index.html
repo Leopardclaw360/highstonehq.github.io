@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <title>StoneClan Territory Map</title>
+    <title>StoneClan Territory</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body>
-    <a-scene>
-      <!-- Camera + Controls -->
-      <a-entity position="0 1.6 5">
-        <a-camera wasd-controls look-controls></a-camera>
-      </a-entity>
+    <a-scene shadow="type: pcfsoft">
+      <!-- Sky -->
+      <a-sky color="#88ccee"></a-sky>
 
-      <!-- Sky + Light -->
-      <a-sky color="#BEE3F6"></a-sky>
-      <a-light type="ambient" intensity="1"></a-light>
-      <a-light type="directional" position="0 10 5" intensity="0.6"></a-light>
+      <!-- Lighting -->
+      <a-entity light="type: directional; color: #ffffff; intensity: 1" position="0 10 -10" castShadow></a-entity>
+      <a-entity light="type: ambient; color: #bbbbbb"></a-entity>
 
       <!-- Ground -->
-      <a-plane color="#8BC34A" rotation="-90 0 0" width="100" height="100"></a-plane>
+      <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#228B22" shadow="receive: true"></a-plane>
 
       <!-- Lake -->
-      <a-circle position="0 0.01 -20" rotation="-90 0 0" radius="10" color="#4FC3F7"></a-circle>
+      <a-cylinder position="-10 0.01 -10" radius="10" height="0.1" color="#1e90ff" opacity="0.8"></a-cylinder>
 
       <!-- Dens -->
-      <a-box position="-10 0.5 -5" depth="2" height="1" width="2" color="#795548"></a-box> <!-- Leader's Den -->
-      <a-box position="-12 0.5 -2" depth="2" height="1" width="2" color="#6D4C41"></a-box> <!-- Warrior's Den -->
-      <a-box position="-8 0.5 -2" depth="2" height="1" width="2" color="#8D6E63"></a-box> <!-- Apprentice Den -->
-      <a-box position="-10 0.5 -1" depth="2" height="1" width="2" color="#A1887F"></a-box> <!-- Elder's Den -->
-      <a-box position="-6 0.5 -4" depth="2" height="1" width="2" color="#9E9D24"></a-box> <!-- Medicine Den -->
+      <a-box position="0 0.5 10" depth="4" height="2" width="4" color="#654321"></a-box> <!-- Leader's Den -->
+      <a-box position="5 0.5 10" depth="4" height="2" width="4" color="#7a5230"></a-box> <!-- Warrior's Den -->
+      <a-box position="10 0.5 10" depth="4" height="2" width="4" color="#8b5a2b"></a-box> <!-- Apprentice Den -->
+      <a-box position="-5 0.5 10" depth="4" height="2" width="4" color="#5c4033"></a-box> <!-- Elder's Den -->
+      <a-box position="-10 0.5 10" depth="4" height="2" width="4" color="#4e342e"></a-box> <!-- Medicine Den -->
 
       <!-- Training Hollow -->
-      <a-circle position="15 0.01 -10" rotation="-90 0 0" radius="5" color="#D7CCC8"></a-circle>
+      <a-circle position="0 0.01 -15" rotation="-90 0 0" radius="5" color="#deb887"></a-circle>
 
       <!-- Cliff -->
-      <a-box position="0 3 -30" width="20" height="6" depth="2" color="#9E9E9E"></a-box>
+      <a-box position="20 2 0" depth="2" height="4" width="10" color="#a9a9a9"></a-box>
 
-      <!-- Trees -->
-      <a-cylinder position="5 1 -10" height="2" radius="0.2" color="#5D4037"></a-cylinder>
-      <a-sphere position="5 2.5 -10" radius="1" color="#388E3C"></a-sphere>
+      <!-- Cats (placeholder models) -->
+      <a-box position="0 0.5 0" depth="1" height="1" width="0.5" color="#ffa07a"></a-box>
+      <a-box position="2 0.5 -2" depth="1" height="1" width="0.5" color="#f4a460"></a-box>
+      <a-box position="-2 0.5 2" depth="1" height="1" width="0.5" color="#d2691e"></a-box>
 
-      <a-cylinder position="7 1 -11" height="2" radius="0.2" color="#5D4037"></a-cylinder>
-      <a-sphere position="7 2.5 -11" radius="1" color="#388E3C"></a-sphere>
-
-      <!-- Cats (placeholders) -->
-      <a-box position="0 0.5 -5" color="#FDD835" depth="1" height="1" width="0.5"></a-box>
-      <a-box position="2 0.5 -6" color="#F48FB1" depth="1" height="1" width="0.5"></a-box>
-      <a-box position="1 0.5 -7" color="#90CAF9" depth="1" height="1" width="0.5"></a-box>
+      <!-- Camera -->
+      <a-entity camera wasd-controls look-controls position="0 1.6 5"></a-entity>
     </a-scene>
   </body>
 </html>
