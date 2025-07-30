@@ -11,14 +11,16 @@
       <a-assets>
         <!-- Realistic Cave Model -->
         <a-asset-item id="caveModel" src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/main/2.0/SimpleMeshes/glTF-Binary/SimpleMeshes.glb"></a-asset-item>
+        
         <!-- Tree Model -->
         <a-asset-item id="treeModel" src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/main/2.0/Avocado/glTF-Binary/Avocado.glb"></a-asset-item>
+        
         <!-- Placeholder Cat Model -->
         <a-asset-item id="catModel" src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/main/2.0/CesiumMan/glTF-Binary/CesiumMan.glb"></a-asset-item>
       </a-assets>
 
       <!-- Ground and Sky -->
-      <a-plane position="0 0 0" rotation="-90 0 0" width="50" height="50" color="#7CFC00" repeat="10 10"></a-plane>
+      <a-plane position="0 0 0" rotation="-90 0 0" width="50" height="50" color="#7CFC00"></a-plane>
       <a-sky color="#87CEEB"></a-sky>
 
       <!-- Dens -->
@@ -27,6 +29,9 @@
       <a-entity gltf-model="#caveModel" position="6 0 -2" scale="0.1 0.1 0.1" rotation="0 30 0"></a-entity> <!-- Apprentice's Den -->
       <a-entity gltf-model="#caveModel" position="8 0 -4" scale="0.1 0.1 0.1" rotation="0 180 0"></a-entity> <!-- Medicine Den -->
       <a-entity gltf-model="#caveModel" position="10 0 -2" scale="0.1 0.1 0.1" rotation="0 -90 0"></a-entity> <!-- Elder's Den -->
+
+      <!-- Extra Cave -->
+      <a-entity gltf-model="#caveModel" position="-3 0 -5" scale="3 3 3"></a-entity>
 
       <!-- Lake -->
       <a-circle position="0 0 -10" rotation="-90 0 0" radius="4" color="#1E90FF"></a-circle>
