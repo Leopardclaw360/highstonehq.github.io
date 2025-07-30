@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>StoneClan Territory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <style> body { margin: 0; } </style>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <!-- Assets could be added here -->
+      </a-assets>
+
+      <!-- Ground -->
+      <a-plane color="#7BC8A4" height="100" width="100" rotation="-90 0 0"></a-plane>
+
+      <!-- Key Locations -->
+      <a-box position="-5 0.5 -5" depth="4" height="1" width="4" color="#8B4513"></a-box>
+      <a-text value="Leader's Den" position="-5 2 -5" align="center" color="#fff"></a-text>
+
+      <a-box position="0 0.5 -5" depth="4" height="1" width="4" color="#A0522D"></a-box>
+      <a-text value="Apprentice Den" position="0 2 -5" align="center" color="#fff"></a-text>
+
+      <a-box position="5 0.5 -5" depth="4" height="1" width="4" color="#DEB887"></a-box>
+      <a-text value="Training Hollow" position="5 2 -5" align="center" color="#fff"></a-text>
+
+      <a-sphere position="-5 1 -10" radius="1.5" color="#000"></a-sphere>
+      <a-text value="Warrior Cat" position="-5 3 -10" align="center" color="#fff"></a-text>
+
+      <!-- Camera and Controls -->
+      <a-entity position="0 1.6 10">
+        <a-camera wasd-controls-enabled="true"></a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
