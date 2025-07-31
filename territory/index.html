@@ -7,43 +7,53 @@
   </head>
   <body>
     <a-scene background="color: #CFE7F5">
+
       <!-- Assets -->
       <a-assets>
-        <a-asset-item id="caveModel" src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/main/2.0/SimpleMeshes/glTF-Binary/SimpleMeshes.glb"></a-asset-item>
-        <a-asset-item id="treeModel" src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/main/2.0/Avocado/glTF-Binary/Avocado.glb"></a-asset-item>
-        <a-asset-item id="catModel" src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/main/2.0/CesiumMan/glTF-Binary/CesiumMan.glb"></a-asset-item>
+        <!-- Cave Model -->
+        <a-asset-item id="caveModel" src="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/Cube/glTF-Binary/Cube.glb"></a-asset-item>
+
+        <!-- Tree Model -->
+        <a-asset-item id="treeModel" src="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/Avocado/glTF-Binary/Avocado.glb"></a-asset-item>
+
+        <!-- Cat Model -->
+        <a-asset-item id="catModel" src="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/CesiumMan/glTF-Binary/CesiumMan.glb"></a-asset-item>
       </a-assets>
 
-      <!-- Ground and Sky -->
-      <a-plane position="0 0 0" rotation="-90 0 0" width="50" height="50" color="#7CFC00"></a-plane>
+      <!-- Ground -->
+      <a-plane rotation="-90 0 0" width="100" height="100" color="#7CFC00" repeat="50 50"></a-plane>
+
+      <!-- Sky -->
       <a-sky color="#87CEEB"></a-sky>
 
-      <!-- Dens (Caves) -->
-      <a-entity gltf-model="#caveModel" position="2 0 -2" scale="0.1 0.1 0.1"></a-entity> <!-- Leader's Den -->
-      <a-entity gltf-model="#caveModel" position="4 0 -4" scale="0.1 0.1 0.1"></a-entity> <!-- Warrior's Den -->
-      <a-entity gltf-model="#caveModel" position="6 0 -2" scale="0.1 0.1 0.1"></a-entity> <!-- Apprentice's Den -->
-      <a-entity gltf-model="#caveModel" position="8 0 -4" scale="0.1 0.1 0.1"></a-entity> <!-- Medicine Den -->
-      <a-entity gltf-model="#caveModel" position="10 0 -2" scale="0.1 0.1 0.1"></a-entity> <!-- Elder's Den -->
+      <!-- Dens -->
+      <a-entity gltf-model="#caveModel" position="2 0 -2" scale="3 3 3"></a-entity> <!-- Leader's Den -->
+      <a-entity gltf-model="#caveModel" position="4 0 -4" scale="3 3 3"></a-entity> <!-- Warrior's Den -->
+      <a-entity gltf-model="#caveModel" position="6 0 -2" scale="3 3 3"></a-entity> <!-- Apprentice's Den -->
+      <a-entity gltf-model="#caveModel" position="8 0 -4" scale="3 3 3"></a-entity> <!-- Medicine Den -->
+      <a-entity gltf-model="#caveModel" position="10 0 -2" scale="3 3 3"></a-entity> <!-- Elder's Den -->
 
       <!-- Lake -->
-      <a-circle position="0 0 -10" rotation="-90 0 0" radius="4" color="#1E90FF"></a-circle>
+      <a-circle position="0 0 -15" rotation="-90 0 0" radius="5" color="#1E90FF"></a-circle>
 
       <!-- Training Hollow -->
-      <a-ring position="-8 0 -8" rotation="-90 0 0" radius-inner="2" radius-outer="3" color="#DEB887"></a-ring>
+      <a-ring position="-10 0 -8" rotation="-90 0 0" radius-inner="2" radius-outer="3" color="#DEB887"></a-ring>
 
       <!-- Trees -->
       <a-entity gltf-model="#treeModel" position="-5 0 -2" scale="2 2 2"></a-entity>
       <a-entity gltf-model="#treeModel" position="-6 0 -6" scale="2 2 2"></a-entity>
       <a-entity gltf-model="#treeModel" position="-7 0 -4" scale="2 2 2"></a-entity>
+      <a-entity gltf-model="#treeModel" position="-3 0 -7" scale="2 2 2"></a-entity>
 
       <!-- Cats -->
       <a-entity gltf-model="#catModel" position="1 0 -1" scale="0.5 0.5 0.5"></a-entity>
       <a-entity gltf-model="#catModel" position="3 0 -3" scale="0.5 0.5 0.5"></a-entity>
 
       <!-- Camera -->
-      <a-entity position="0 0.6 5">
+      <a-entity position="0 1.6 8">
         <a-camera wasd-controls look-controls></a-camera>
       </a-entity>
+
     </a-scene>
   </body>
 </html>
